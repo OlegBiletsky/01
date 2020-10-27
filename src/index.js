@@ -6,7 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import Comment from './Comment';
 import Clock from './Clock';
 import Toggle from './Toggle';
-
+import Greeting from './Greeting';
+import LoginControl from './LoginControl';
+import Mailbox from './Mailbox';
+import Page from './Page';
 
 
 const user = {
@@ -59,19 +62,25 @@ function ActionClick() {
 }
 const element3 = <div>{ActionClick()}</div>
 
+const message = ['qweqwe', 'hello', 'hei'];
+
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {element}
-    {element2}
-    <Comment 
-        author={dataArray.author} 
-        text = {dataArray.text} 
-        date={dataArray.data}
-    />
-    <Clock/>
-    {element3}
-    <Toggle/>
+        {/* <App /> */}
+        {element}
+        {element2}
+        <Comment 
+            author={dataArray.author} 
+            text = {dataArray.text} 
+            date={dataArray.data}
+        />
+        <Clock/>
+        {element3}
+        <Toggle/>
+        <Greeting isLoggedIn={false}/>
+        <LoginControl/>
+        <Mailbox unreadMessage={message}/>
+        <Page/>
   </React.StrictMode>,
   document.getElementById('root')
 );
