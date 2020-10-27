@@ -1,5 +1,7 @@
+import React from 'react'
 import logo from './logo.svg';
 import './App.css';
+
 
 function App() {
   return (
@@ -11,11 +13,11 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="http://www.if.gov.ua/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React and i am on job in department
         </a>
       </header>
     </div>
