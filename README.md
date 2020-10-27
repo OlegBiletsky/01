@@ -1,4 +1,7 @@
-# Проходжу основні поняття
+# Проходжу основні поняття по 
+[React documentation](https://uk.reactjs.org/docs/hello-world.html)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
