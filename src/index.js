@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Comment from './Comment';
+import Clock from './Clock';
+import Toggle from './Toggle';
 
 
 
@@ -11,7 +13,6 @@ const user = {
      firstName: "Oleh",
      lastName: "Biletskyi",
 }
-
 
 function formatName(user) {
     return user.firstName + ' ' + user.lastName;
@@ -32,18 +33,6 @@ const element = <h1>Hello, {formatName(user)}</h1>;
 const element2 = <h1>Hello, {getGretting(false)}</h1>;
 
 
-function tick() {
-    const element = (
-        <div>
-            <h1>hi, its timer</h1>
-            <h2>Зараз {new Date().toLocaleString()}</h2>
-        </div>
-    );
-    ReactDOM.render(element, document.getElementById("root"));
-}
-
-// let element3 = setInterval(tick, 1000)
-
 let dataArray = {
     author: {
         name: "King Kun",
@@ -53,14 +42,36 @@ let dataArray = {
     data: new Date().toLocaleString(),
 }
 
+function ActionClick() {
+    function handleclick(e) {
+        e.preventDefault();
+        console.log('HEi');
+    }
+
+    return (
+        <a 
+        href="#"
+        onClick={handleclick}
+        >
+            Click me
+        </a>
+    )
+}
+const element3 = <div>{ActionClick()}</div>
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
     {element}
     {element2}
-    {/* {element3} */}
-    <Comment author={dataArray.author} text = {dataArray.text} date={dataArray.data}/>
+    <Comment 
+        author={dataArray.author} 
+        text = {dataArray.text} 
+        date={dataArray.data}
+    />
+    <Clock/>
+    {element3}
+    <Toggle/>
   </React.StrictMode>,
   document.getElementById('root')
 );
