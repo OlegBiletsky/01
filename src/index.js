@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Comment from './Comment';
 
 
 
@@ -41,9 +42,16 @@ function tick() {
     ReactDOM.render(element, document.getElementById("root"));
 }
 
-let element3 = setInterval(tick, 1000)
+// let element3 = setInterval(tick, 1000)
 
-
+let dataArray = {
+    author: {
+        name: "King Kun",
+        avatarUrl: "https://loremflickr.com/320/240/dog"
+    },
+    text: "lorem20loremlorem20loremlorem20lorem",
+    data: new Date().toLocaleString(),
+}
 
 
 ReactDOM.render(
@@ -51,7 +59,8 @@ ReactDOM.render(
     {/* <App /> */}
     {element}
     {element2}
-    {element3}
+    {/* {element3} */}
+    <Comment author={dataArray.author} text = {dataArray.text} date={dataArray.data}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
