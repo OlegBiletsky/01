@@ -11,6 +11,9 @@ import LoginControl from './LoginControl';
 import Mailbox from './Mailbox';
 import Page from './Page';
 import NumberList from './NumberList';
+import NameForm from './NameForm';
+import FlavorForm from './FlavorForm';
+import FlavorFormMulty from './FlavorFormMulty';
 
 
 const user = {
@@ -85,6 +88,9 @@ ReactDOM.render(
         <Mailbox unreadMessage={message}/>
         <Page/>
         <NumberList number={numbers}/>
+        <NameForm/>
+        <FlavorForm />
+        <FlavorFormMulty />
   </React.StrictMode>,
   document.getElementById('root')
 );
