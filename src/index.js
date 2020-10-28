@@ -10,6 +10,7 @@ import Greeting from './Greeting';
 import LoginControl from './LoginControl';
 import Mailbox from './Mailbox';
 import Page from './Page';
+import NumberList from './NumberList';
 
 
 const user = {
@@ -64,6 +65,8 @@ const element3 = <div>{ActionClick()}</div>
 
 const message = ['qweqwe', 'hello', 'hei'];
 
+const numbers = ["one","two","three","four","five"];
+
 ReactDOM.render(
   <React.StrictMode>
         {/* <App /> */}
@@ -81,6 +84,7 @@ ReactDOM.render(
         <LoginControl/>
         <Mailbox unreadMessage={message}/>
         <Page/>
+        <NumberList number={numbers}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
