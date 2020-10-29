@@ -16,7 +16,6 @@ class FlavorFormMulty extends React.Component {
         // this.setState( (state) =>({value: [e.target.value, e.target.value,]}) )
         // this.setState( (state) =>({ value: [...state.value, option] }))
     }
-
     handleSubmit(e) {
         console.log(this.state.value);
         e.preventDefault();

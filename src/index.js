@@ -14,6 +14,7 @@ import NumberList from './NumberList';
 import NameForm from './NameForm';
 import FlavorForm from './FlavorForm';
 import FlavorFormMulty from './FlavorFormMulty';
+import Reservation from './Reservation';
 
 
 const user = {
@@ -91,6 +92,7 @@ ReactDOM.render(
         <NameForm/>
         <FlavorForm />
         <FlavorFormMulty />
+        <Reservation/>
   </React.StrictMode>,
   document.getElementById('root')
 );
